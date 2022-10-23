@@ -51,6 +51,7 @@
 }
 
 .entry {
+    overflow-x: hidden;
     font-family: system-ui;
     font-size: 1.89rem;
     color: #050617;
@@ -99,11 +100,23 @@
     align-items: center;
 }
 
-a {
+.link-bold {
     padding-top: 1em;
     color: var(--color-white);
     text-decoration: none;
     font-weight: bolder;
+}
+
+.link-thin {
+    padding-top: 1em;
+    color: var(--color-blue);
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.link-thin:hover,
+.link-bold:hover {
+    color: var(--color-dark);
 }
 
 .neumorph {
@@ -137,52 +150,57 @@ a {
     }
 }
 
+.image-resources-container .image-container {
+    position: relative;
+    padding: 1em;
+}
+
+.image-resources-container .image-container .image-share-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-start;
+    margin: 1em;
+}
+
+.image-resources-container .image-container .image-share-container .image-download-link,
+.image-resources-container .image-container .image-share-container .image-link,
+.image-resources-container .image-container .image-share-container .image-share-satelite {
+    padding: 1em;
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    margin: 8px;
+    border-radius: 25px;
+}
+
+.image-download {
+    display: contents;
+}
+
+@media screen and (min-width: 992px) {
+
     .image-resources-container .image-container {
-        position: relative;
-        padding: 1em;
+        max-width: 30%;
+        display: block;
     }
+}
 
-    .image-resources-container .image-container .image-share-container {
-        position: absolute;
-        top: 0;
-        right: 0;
-        display: flex;
-        align-items: flex-start;
-        margin: 1em;
-    }
+.image-resources-container .image {
+    max-width: 100%;
+}
 
-    .image-resources-container .image-container .image-share-container .image-download-link,
-    .image-resources-container .image-container .image-share-container .image-link,
-    .image-resources-container .image-container .image-share-container .image-share-satelite {
-        padding: 1em;
-        color: var(--color-white);
-        background-color: var(--color-blue);
-        margin: 8px;
-        border-radius: 25px;
-    }
+.image-share-container .image-share-satelite {
+    display: none;
+}
 
-    .image-download {
-        display: contents;
-    }
+.image-share-container:hover .image-share-satelite,
+.image-share-container:visited .image-share-satelite,
+.image-share-container:active .image-share-satelite {
+    display: flex;
+}
 
-    @media screen and (min-width: 992px) {
-
-        .image-resources-container .image-container {
-            max-width: 30%;
-            display: block;
-        }
-    }
-
-    .image-resources-container .image {
-        max-width: 100%;
-    }
-
-    .image-share-container .image-share-satelite {
-        display: none;
-    }
-
-    .image-share-container:hover .image-share-satelite,
-    .image-share-container:visited .image-share-satelite,
-    .image-share-container:active .image-share-satelite {
-        display: flex;
-    }
+.footer {
+    background-color: var(--color-white);
+    padding: 1em;
+}
