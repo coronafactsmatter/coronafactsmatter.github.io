@@ -59,6 +59,15 @@
     margin: 0;
 }
 
+.impressum {
+    padding: 1em;
+    color: var(--color-white);
+}
+
+.impressum a {
+    color: var(--color-white);
+}
+
 .banner {
     position: relative;
     width: 100vw;
