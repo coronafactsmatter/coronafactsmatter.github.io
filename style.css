@@ -50,6 +50,10 @@
     padding-left: 0.5em;
 }
 
+.header .header-link {
+    text-decoration: none;
+}
+
 .entry {
     overflow-x: hidden;
     font-family: system-ui;
