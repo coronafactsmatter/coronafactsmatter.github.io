@@ -57,7 +57,7 @@
 .entry {
     overflow-x: hidden;
     font-family: system-ui;
-    font-size: 1.89rem;
+    font-size: 1.135rem;
     color: #050617;
     background-color: #498BA1;
     margin: 0;
@@ -158,6 +158,10 @@
 }
 
 @media screen and (min-width: 992px) {
+    .entry {
+        font-size: 1.89rem;
+    }
+
     .image-resources-container {
         flex-direction: row;
     }
@@ -165,52 +169,36 @@
 
 .image-resources-container .image-container {
     position: relative;
-    padding: 1em;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    border: 1px solid var(--color-white);
+    border-radius: 10px;
 }
 
-.image-resources-container .image-container .image-share-container {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    align-items: flex-start;
-    margin: 1em;
+.image-share-container {
+    font-size: large;
+    text-align: center;
+    margin: 0em 2em;
+    padding: 1em 0;
 }
 
-.image-resources-container .image-container .image-share-container .image-download-link,
-.image-resources-container .image-container .image-share-container .image-link,
-.image-resources-container .image-container .image-share-container .image-share-satelite {
-    padding: 1em;
-    color: var(--color-white);
-    background-color: var(--color-blue);
-    margin: 8px;
-    border-radius: 25px;
+.image-share-container:hover {
+    color: var(--color-dark);
 }
 
-.image-download {
-    display: contents;
-}
 
 @media screen and (min-width: 992px) {
 
     .image-resources-container .image-container {
         max-width: 30%;
         display: block;
+        margin: 0.5em;
+
     }
 }
 
 .image-resources-container .image {
     max-width: 100%;
-}
-
-.image-share-container .image-share-satelite {
-    display: none;
-}
-
-.image-share-container:hover .image-share-satelite,
-.image-share-container:visited .image-share-satelite,
-.image-share-container:active .image-share-satelite {
-    display: flex;
 }
 
 .footer {
